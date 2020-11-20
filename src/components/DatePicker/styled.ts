@@ -6,7 +6,7 @@ export const DateWrapper = styled.div`
     width: 100%;
     left: 0;
     top: 0;
-    margin-top: 86px;
+    margin-top: 84px;
     z-index: 80;
     background: #f9f9f9;
 
@@ -17,7 +17,7 @@ export const DateWrapper = styled.div`
     border-bottom: 1px solid #c8c8c8;
 
     ${media.lessThan('huge')`
-        margin-top: 86px;
+        margin-top: 84px;
     `}
 
     strong {
