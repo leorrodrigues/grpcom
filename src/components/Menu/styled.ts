@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 interface HeaderBurgerProps {
     open: boolean;
@@ -20,7 +21,7 @@ export const MenuLinksList = styled.ul`
 
 export const MenuLinksItem = styled.li`
     & + & {
-        margin-top: 15px;
+        margin-top: 25px;
     }
 `;
 
@@ -33,15 +34,16 @@ export const MenuLinksLink = styled.a`
     font-size: 3rem;
     transition: opacity 0.5s;
 
-    & + a {
-        margin-left: 32px;
-    }
     &:hover {
         opacity: 0.5;
         &::after {
             width: 100%;
         }
     }
+
+    ${media.lessThan('small')`
+        font-size: 2rem;
+    `}
 `;
 
 export const HeaderBurger = styled.div<HeaderBurgerProps>`
@@ -69,6 +71,10 @@ export const HeaderBurger = styled.div<HeaderBurgerProps>`
             margin-right: 38px;
         `}
 
+    ${media.lessThan('small')`
+        height: 20px;
+    `}
+
     p {
         z-index: 100;
         width: 40px;
@@ -91,6 +97,10 @@ export const HeaderBurger = styled.div<HeaderBurgerProps>`
         &:nth-of-type(2) {
             width: 25px;
 
+            ${media.lessThan('small')`
+                width: 20px;
+            `}
+
             ${({ open }) =>
                 open &&
                 css`
@@ -107,6 +117,17 @@ export const HeaderBurger = styled.div<HeaderBurgerProps>`
                     background: #000;
                 `}
         }
+
+        ${media.lessThan('small')`
+            width: 30px;
+            height: 2px;
+        `}
+
+        ${({ open }) =>
+            open &&
+            media.lessThan('small')`
+                width: 25px;
+            `}
     }
 `;
 

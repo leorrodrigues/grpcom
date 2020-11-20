@@ -18,11 +18,11 @@ const DatePicker: React.FC<DatePickerProps> = ({
     return (
         <S.DateWrapper>
             <button type="button" onClick={() => previousDay()}>
-                <RiArrowLeftSLine color="#006597" size={80} />
+                <RiArrowLeftSLine color="#006597" size={60} />
             </button>
             <strong>{date}</strong>
             <button type="button" onClick={() => nextDay()}>
-                <RiArrowRightSLine color="#006597" size={80} />
+                <RiArrowRightSLine color="#006597" size={60} />
             </button>
         </S.DateWrapper>
     );
