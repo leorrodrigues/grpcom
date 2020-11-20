@@ -29,7 +29,6 @@ export const ProgramItemThumbWrapper = styled.div`
     position: relative;
     max-width: 600px;
     min-height: auto;
-    background: red;
 
     img {
         max-width: 600px;
@@ -51,7 +50,6 @@ export const ProgramItemLive = styled.div`
 
     top: 0px;
     float: left;
-    background: red;
     height: 40px;
     padding: 10px;
 
